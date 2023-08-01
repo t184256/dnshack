@@ -4,9 +4,10 @@ let
   androidPkgs = import pkgs.path {
     crossSystem = {
       config = "aarch64-unknown-linux-android";
-      sdkVer = "28";
-      ndkVer = "24";
-      useAndroidPrebuilt = true;
+      sdkVer = "32";
+      useAndroidPrebuilt = false;
+      libc = "bionic";
+      useLLVM = true;
     };
   };
 
